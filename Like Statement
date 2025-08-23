@@ -1,0 +1,17 @@
+-- Like Statement --
+SELECT * FROM customers
+WHERE education LIKE "%SCHOOL";
+
+SELECT * FROM customers
+WHERE education LIKE "%HIGH%";
+
+SELECT * FROM customers
+WHERE education LIKE "HIGH%";
+
+SELECT * FROM customers
+WHERE acct_open_date LIKE "%1990" 
+AND birthdate LIKE "%1919";
+
+SELECT * FROM customers
+WHERE acct_open_date LIKE "%1995" 
+OR birthdate LIKE "%1921";
