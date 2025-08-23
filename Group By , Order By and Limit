@@ -1,0 +1,51 @@
+-- GROUP BY --
+
+SELECT * FROM CUSTOMERS;
+
+SELECT GENDER FROM customers;
+
+SELECT GENDER FROM customers
+GROUP BY gender;
+
+SELECT GENDER, AVG(total_children), 
+MIN(total_children),
+MAX(total_children),
+COUNT(total_children) FROM customers
+GROUP BY gender;
+
+SELECT * FROM products;
+
+SELECT PRODUCT_BRAND FROM products;
+
+SELECT PRODUCT_BRAND FROM products
+GROUP BY product_brand;
+
+SELECT PRODUCT_BRAND, 
+ROUND(AVG(product_cost), 2) AS AVG_COST, 
+ROUND(AVG(product_weight),2) AS AVG_WEIGHT 
+FROM products
+GROUP BY product_brand;
+
+-- order by ---
+SELECT * FROM customers
+ORDER BY first_name;
+
+SELECT * FROM customers
+ORDER BY first_name DESC, last_name desc;
+
+SELECT * FROM customers
+ORDER BY first_name, last_name;
+
+SELECT * FROM customers
+ORDER BY 3, 4;
+
+SELECT * FROM customers
+ORDER BY first_name 
+LIMIT 7;
+
+SELECT * FROM customers
+ORDER BY first_name 
+LIMIT 5,2;
+
+
+
