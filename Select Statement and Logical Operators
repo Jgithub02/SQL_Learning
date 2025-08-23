@@ -1,0 +1,19 @@
+SELECT * FROM sales.customers;
+select distinct member_card from sales.customers;
+select * from customers
+where member_card = "silver" or customer_country = "USA";
+
+-- AND OR NOT STATEMENT --- (Logical Operators)
+SELECT * FROM PRODUCTS;
+SELECT * FROM PRODUCTS 
+WHERE PRODUCT_RETAIL_PRICE >= 1;
+
+SELECT * FROM PRODUCTS 
+WHERE PRODUCT_RETAIL_PRICE >= 1 AND RECYCLABLE = 1;
+SELECT * FROM PRODUCTS 
+WHERE PRODUCT_RETAIL_PRICE >= 1 AND recyclable = 1 AND low_fat = 1 ;
+
+SELECT distinct product_brand from products; 
+
+SELECT * FROM PRODUCTS 
+WHERE product_brand != "jeffers" AND product_brand = "Blue label";
