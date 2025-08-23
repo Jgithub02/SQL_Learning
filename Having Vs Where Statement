@@ -1,0 +1,10 @@
+-- Having Vs Where --
+
+SELECT * FROM customers;
+
+SELECT CUSTOMER_COUNTRY, 
+AVG(total_children) AS AVG_CHILD 
+FROM customers
+WHERE customer_country LIKE "%CO"
+GROUP BY customer_country
+HAVING AVG_CHILD> 2.5;
