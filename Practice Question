@@ -1,4 +1,5 @@
-# Table: Products
+# Question 1 
+Table: Products
 Write a solution to find the ids of products that are both low fat and recyclable.
 
 Return the result table in any order.
@@ -8,3 +9,73 @@ Solution
 select product_id from products 
 where low_fats = "Y" and recyclable ="Y";
 ```
+# Question 2 
+Table: Customers
+Find the names of the customers that are either:
+
+referred by any customer with id != 2.
+not referred by any customer.
+Return the result table in any order.
+
+Solution 
+```
+SELECT name
+FROM customer 
+WHERE  referee_id is null or referee_id != 2;
+```
+
+# Question 3 
+Table: World 
+A country is big if:
+
+it has an area of at least three million (i.e., 3000000 km2), or
+it has a population of at least twenty-five million (i.e., 25000000).
+Write a solution to find the name, population, and area of the big countries.
+
+Return the result table in any order.
+
+Solution
+``` 
+SELECT name, population, area 
+from world 
+where area >= 3000000 or population >= 25000000;
+``` 
+
+
+# Question 4 
+Table: Views
+Write a solution to find all the authors that viewed at least one of their own articles.
+
+Return the result table sorted by id in ascending order.
+
+Solution 
+```
+SELECT distinct(author_id) as id from views 
+where author_id = viewer_id 
+order by id asc;
+```
+
+# Question 5 
+Table: Tweets 
+Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+
+Return the result table in any order.
+
+Solution 
+```
+SELECT tweet_id 
+FROM tweets 
+where char_Length(Content) > 15; 
+```
+
+
+
+
+
+
+
+
+
+
+
+
