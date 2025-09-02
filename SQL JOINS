@@ -1,0 +1,35 @@
+-- JOINS --
+
+-- INNER JOIN ---
+
+
+SELECT	* FROM products;
+
+SELECT * FROM `returns_1997-1998`;
+
+SELECT * FROM products
+INNER JOIN `returns_1997-1998`
+	ON products.product_id = `returns_1997-1998`.product_id;
+
+
+SELECT * FROM products
+INNER JOIN `returns_1997-1998`
+	ON products.product_id = `returns_1997-1998`.product_id
+ORDER BY products.product_id ASC;
+
+
+SELECT * FROM products AS PR
+INNER JOIN `returns_1997-1998` AS RT
+	ON PR.product_id = RT.product_id
+ORDER BY PR.product_id ASC;
+
+SELECT PR.product_id, product_name, product_retail_price FROM products AS PR
+INNER JOIN `returns_1997-1998` AS RT
+	ON PR.product_id = RT.product_id;
+
+
+-- OUTER JOIN -- 
+
+SELECT * FROM products AS PR
+RIGHT JOIN `returns_1997-1998` AS TR
+	ON PR.product_id = TR.product_id;
