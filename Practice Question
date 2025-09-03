@@ -69,7 +69,7 @@ where char_Length(Content) > 15;
 ```
 
 # Question 6 
-Table: Employees 
+Table: Employees & EmployeeUNI
 Write a solution to show the unique ID of each user, If a user does not have a unique ID replace just show null.
 
 Return the result table in any order.
@@ -81,7 +81,26 @@ LEFT JOIN EmployeeUNI AS UNI
     ON emp.id = UNI.id;
 ```
 
+# Question 7
+Table: Sales & Products
+Write a solution to report the product_name, year, and price for each sale_id in the Sales table.
 
+Return the resulting table in any order.
+Solution
+```
+SELECT P.product_name, S.year, price
+FROM sales as S
+JOIN product as P
+ON S.product_id = P.product_id;
+```
+# Question 8
+Table: Visits & Transactions
+Write a solution to find the IDs of the users who visited without making any transactions and the number of times they made these types of visits.
+
+Return the result table sorted in any order.
+
+Solution 
+```
 
 
 
