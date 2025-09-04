@@ -110,6 +110,12 @@ GROUP BY V.customer_id;
 ```
 # Question 9 
 Table: Weather 
+Write a solution to find all dates' id with higher temperatures compared to its previous dates (yesterday).
+
+Return the result table in any order.
+
+Solution 
+```
 
 
 
