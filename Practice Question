@@ -101,7 +101,15 @@ Return the result table sorted in any order.
 
 Solution 
 ```
-
+SELECT V.customer_id, count(V.visit_id) as count_no_trans
+FROM visits as V 
+LEFT JOIN Transactions as T 
+    ON V.visit_id = T.Visit_id 
+WHERE T.transaction_id is null
+GROUP BY V.customer_id;
+```
+# Question 9 
+Table: Weather 
 
 
 
