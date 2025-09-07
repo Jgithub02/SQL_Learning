@@ -157,6 +157,19 @@ LEFT JOIN Bonus as B
 WHERE B.bonus < 1000 OR B.bonus is null ;
 ```
 
+# Question 11 
+Table: Student, Subject & Examination
+Write a solution to find the number of times each student attended each exam.
+
+Return the result table ordered by student_id and subject_name.
+
+Solution 
+```
+
+
+
+
+
 
 
 
