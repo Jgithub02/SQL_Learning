@@ -173,6 +173,22 @@ ON ST.student_id = EM.student_id AND SU.subject_name = EM.subject_name
 GROUP BY ST.student_id, SU.subject_name
 ORDER BY ST.student_id;
 ```
+# Question 12 
+Table: Employee
+Write a solution to find managers with at least five direct reports.
+
+Return the result table in any order.
+
+Solution 
+```
+SELECT E1.name 
+FROM Employee AS E1
+INNER JOIN Employee AS E2 
+ON E1.id = E2.managerID
+GROUP BY  E2.managerID
+HAVING COUNT(E2.managerID)>= 5;
+```
+
 
 
 
