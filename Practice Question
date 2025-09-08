@@ -188,7 +188,19 @@ ON E1.id = E2.managerID
 GROUP BY  E2.managerID
 HAVING COUNT(E2.managerID)>= 5;
 ```
+# Question 13 
+Table: Signups & Confirmations 
+Write a solution to find the confirmation rate of each user.
+Return the result table in any order.
 
+Solution 
+```
+SELECT s.user_id, ROUND(AVG(IF(c.action="confirmed",1,0)),2) AS confirmation_rate
+FROM Signups AS s 
+LEFT JOIN Confirmations AS c 
+ON s.user_id= c.user_id 
+GROUP BY user_id;
+```
 
 
 
