@@ -202,7 +202,16 @@ ON s.user_id= c.user_id
 GROUP BY user_id;
 ```
 Question 14 
-Table: 
+Table: Queries
+Write a solution to find each query_name, the quality and poor_query_percentage.
+
+Both quality and poor_query_percentage should be rounded to 2 decimal places.
+
+Return the result table in any order.
+
+Solution
+```
+
 
 
 
