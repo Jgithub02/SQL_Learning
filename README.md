@@ -1,3 +1,2 @@
-# SQL_Learning
-The roadmap is to learn Data Engineer skills. 
-I will store all the code in this repository.
+# SQL_Learning 
+I will store all about SQL in this repository.
