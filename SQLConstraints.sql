@@ -1,0 +1,33 @@
+CREATE TABLE users (
+ id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE
+ );
+ 
+ ALTER TABLE users 
+ ADD CONSTRAINT unique_email UNIQUE (email);
+ 
+ SELECT * FROM users;
+ 
+DROP TABLE USERS;
+
+
+  CREATE TABLE users (
+ id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+ );
+
+ ALTER TABLE users
+ MODIFY COLUMN name VARCHAR(100) NOT NULL;
+ 
+ALTER TABLE users
+MODIFY COLUMN name VARCHAR(100) NULL;
+
+ALTER TABLE users 
+ADD COLUMN date_of_birth DATE;
+
+SELECT * FROM users;
+
+ALTER TABLE users
+ADD CONSTRAINT chk_dob CHECK (date_of_birth > '2000-01-01');
+
+
