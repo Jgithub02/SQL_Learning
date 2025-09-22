@@ -72,7 +72,7 @@ SELECT * FROM users ORDER BY created_at DESC LIMIT 10;
 SELECT * FROM users WHERE salary > 60000 ORDER BY created_at DESC LIMIT 5;
 SELECT * FROM users ORDER BY salary DESC;
 SELECT * FROM users WHERE salary BETWEEN 50000 AND 70000;
--- above query give error as "Salary" column is not in the users table 
+-- The above query gives error as "Salary" column is not in the users table 
 
 -- UPDATE - Modifying Existing Data
 UPDATE users 
@@ -89,6 +89,3 @@ WHERE ID = 3;
 
 -- DROP TABLE 
 DROP TABLE USERS;
-
-
-
